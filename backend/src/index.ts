@@ -60,6 +60,5 @@ app.use(errorMiddleware)
 
 app.listen(config.PORT, async () => {
     console.log(`Server is running on port ${config.PORT} in ${config.NODE_ENV} mode`);
-    console.log(`Frontend Origin: ${config.FRONTEND_ORIGIN}`);
     await connectToDatabase();
 })

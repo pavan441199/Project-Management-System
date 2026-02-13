@@ -11,9 +11,6 @@ import passport from "passport";
 export const googleLoginCallback = asyncHandler(async (req: Request, res: Response) => {
 
   const currentWorkspace = req.user?.currentWorkspace;
-  console.log("Google Callback Hit");
-  console.log("User in callback:", req.user);
-  console.log("Session in callback:", req.session);
 
   if (!currentWorkspace) {
     return res.redirect(
